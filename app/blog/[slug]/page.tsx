@@ -14,6 +14,7 @@ export default async function Page({ params }: ParamProps) {
     <div>
       <h1>Slug: {slug}</h1>
       <p>dkmm</p>
+      <p>hello</p>
     </div>
   );
 }
