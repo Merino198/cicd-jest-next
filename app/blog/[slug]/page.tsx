@@ -13,7 +13,7 @@ export default async function Page({ params }: ParamProps) {
   return (
     <div>
       <h1>Slug: {slug}</h1>
-      <p>dkmm</p>
+      <p>dkm</p>
       <p>hello</p>
     </div>
   );
