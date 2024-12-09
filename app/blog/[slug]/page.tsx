@@ -8,6 +8,10 @@ export async function generateMetadata({ params }: ParamProps) {
   return { title: `Post: ${slug}` };
 }
 
+export async function generateStaticParams() {
+  return []
+}
+
 export default async function Page({ params }: ParamProps) {
   const slug = (await params).slug
   return (
