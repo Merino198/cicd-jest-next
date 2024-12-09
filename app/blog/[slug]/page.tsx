@@ -1,19 +1,20 @@
 interface ParamProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
-export function generateMetadata({ params }: ParamProps) {
-  const slug = (params).slug;
+export async function generateMetadata({ params }: ParamProps) {
+  const slug = (await params).slug;
 
   return { title: `Post: ${slug}` };
 }
 
-export default function Page({ params }: ParamProps) {
-  const slug = (params).slug
+export default async function Page({ params }: ParamProps) {
+  const slug = (await params).slug
   return (
     <div>
       <h1>Slug: {slug}</h1>
       <p>dkm</p>
+      <p>hello</p>
     </div>
   );
 }
